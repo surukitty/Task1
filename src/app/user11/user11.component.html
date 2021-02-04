@@ -1,0 +1,57 @@
+<h1>user11 works</h1>
+<mat-sidenav-container fullscreen>
+<mat-sidenav #sidenav opened mode="side">
+  <h1 >Hotel Windsore</h1>
+  <mat-divider></mat-divider>
+  <h1><a routerLink="hotel"><mat-icon>local_airport</mat-icon>Plan a trip</a></h1>
+  <mat-divider></mat-divider>
+  <h1><a routerLink="giftcard"><mat-icon>redeem</mat-icon>Gift Cards</a></h1>
+  <mat-divider></mat-divider>
+  <h1><a routerLink="card"><mat-icon>stars</mat-icon>Our Branches</a></h1>
+  <mat-divider></mat-divider>
+
+  <button mat-button [matMenuTriggerFor]="menu"><h1>MyAccount</h1></button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="secondlevel" xPosition="below"> 
+        <mat-icon>account_box</mat-icon>
+        Profile
+    </button>
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        Services
+    </button>
+    <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+         Log out
+    </button>
+</mat-menu>
+<mat-menu #secondlevel="matMenu">
+    <button mat-menu-item>Admin account</button>
+    <button mat-menu-item>Guest Account</button>
+    <button mat-menu-item>Default Account</button>
+</mat-menu>
+</mat-sidenav>
+
+<mat-sidenav-content>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+    <mat-icon>home</mat-icon>
+    </button>
+    My application
+    <span class="toolbar-spacer"></span>
+    <app-user></app-user>
+    <app-rooms></app-rooms>
+    <app-offers></app-offers>
+    <app-customer></app-customer>
+  </mat-toolbar>
+
+  <div class="main-content">
+    Main content area
+    <router-outlet></router-outlet> 
+  </div>
+ <app-grid></app-grid>
+</mat-sidenav-content>
+</mat-sidenav-container>
+<mat-divider></mat-divider>
+<!--#023075-->

@@ -1,0 +1,16 @@
+
+<button mat-button [matMenuTriggerFor]="menu">Rooms</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item xPosition="below"> 
+        <mat-icon>account_box</mat-icon>
+        <a routerLink="room1">Rooms</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>star</mat-icon>
+        <a href="assets/1.html">Book rooms</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>star</mat-icon>
+        <a href="assets/11.html">Room services</a>
+    </button>
+</mat-menu>

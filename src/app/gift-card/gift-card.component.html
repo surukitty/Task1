@@ -1,0 +1,177 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="assets/yoga.jpg" height="300px" width="1000px" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="assets/gift2.jpg" height="300px" width="1000px" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="assets/gift3.jpg" height="300px" width="1000px" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <center><img src="assets/roomdesign.png" height="20px" width="100px"></center>
+  <mat-tab-group>
+    <mat-tab label="Birthday"><p>Thinking out of the Gift Box on the fly? Nothing speaks quite like a thoughtful gift for those special occasions when you want to thank someone and tell them how much they mean to you. But the best gifts in life rarely come in a box. They comprise alluring encounters and exquisite experiences that make precious memories — the kind that you return to over and over again. Taj Experiences eGift Cards feature artistic watercolour motifs in a range of themed design options that take inspiration from our iconic heritage and art and celebrate the myriad cultural traditions of our festivals, from Christmas baubles on mango trees to the fanous and kandeels that light up Eid and Diwali. Delivered instantly and redeemable immediately across Taj, SeleQtions and Vivanta hotels and Ama Trails & Stays in India, Taj Experiences eCards are the perfect gift for a birthday, engagement, wedding or festive celebration.</p> </mat-tab>
+    <mat-tab label="New Year"><p>Taj Experiences eGift Cards feature artistic watercolour motifs in a range of themed design options that take inspiration from our iconic heritage and art and celebrate the myriad cultural traditions of our festivals, from Christmas baubles on mango trees to the fanous and kandeels that light up Eid and Diwali. Delivered instantly and redeemable immediately across Taj, SeleQtions and Vivanta hotels and Ama Trails & Stays in India, Taj Experiences eCards are the perfect gift for a birthday, engagement, wedding or festive celebration.</p></mat-tab>
+    <mat-tab label="Wedding Receptions"><p>Taj Experiences eGift Cards feature artistic watercolour motifs in a range of themed design options that take inspiration from our iconic heritage and art and celebrate the myriad cultural traditions of our festivals, from Christmas baubles on mango trees to the fanous and kandeels that light up Eid and Diwali. Delivered instantly and redeemable immediately across Taj, SeleQtions and Vivanta hotels and Ama Trails & Stays in India, Taj Experiences eCards are the perfect gift for a birthday, engagement, wedding or festive celebration.</p></mat-tab>
+    <mat-tab label="Mother's day"><p>Taj Experiences eGift Cards feature artistic watercolour motifs in a range of themed design options that take inspiration from our iconic heritage and art and celebrate the myriad cultural traditions of our festivals, from Christmas baubles on mango trees to the fanous and kandeels that light up Eid and Diwali. Delivered instantly and redeemable immediately across Taj, SeleQtions and Vivanta hotels and Ama Trails & Stays in India, Taj Experiences eCards are the perfect gift for a birthday, engagement, wedding or festive celebration.</p></mat-tab>
+    <mat-tab label="Father's day"><p>Taj Experiences eGift Cards feature artistic watercolour motifs in a range of themed design options that take inspiration from our iconic heritage and art and celebrate the myriad cultural traditions of our festivals, from Christmas baubles on mango trees to the fanous and kandeels that light up Eid and Diwali. Delivered instantly and redeemable immediately across Taj, SeleQtions and Vivanta hotels and Ama Trails & Stays in India, Taj Experiences eCards are the perfect gift for a birthday, engagement, wedding or festive celebration.</p></mat-tab>
+  </mat-tab-group>
+ <mat-divider></mat-divider>
+
+ <center><img src="assets/roomdesign.png" height="20px" width="100px"></center>
+ <center><button mat-raised-button color="accent">Card Details</button></center>
+ <div class="container">
+<div class="row">
+  <div class="col-sm">
+    <label>Value of Card</label><br>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">5,000</a>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">15,000</a>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">25,000</a><hr>
+    <label>Quantity</label><br>
+ <mat-form-field appearance="fill">
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option>None</mat-option>
+    <mat-option value="option1">1</mat-option>
+    <mat-option value="option2">2</mat-option>
+    <mat-option value="option3">3</mat-option>
+    <mat-option value="option3">4</mat-option>
+    <mat-option value="option3">5</mat-option>
+  </mat-select>
+</mat-form-field>
+
+  </div>
+  <div class="col-sm">
+    <label><center>Sender's Details</center></label>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter Sendr's Name</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Enter Senders name</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Enter Sender's Phone No</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Enter Phone Number</mat-hint>
+      </mat-form-field>
+      </p>
+      <button mat-flat-button color="accent" (click)="msg1()">Submit</button><br>
+      <div class="container">
+        <h3><p>{{message}}</p></h3>
+      </div>
+  
+    
+  </div>
+
+  <div class="col-sm">
+    <label><center>Reciever's Details</center></label>
+
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter Reciever's Name</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Enter Recievers name</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Enter Reciever's Phone No</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Enter Phone Number</mat-hint>
+      </mat-form-field>
+      </p>
+      <button mat-flat-button color="accent" (click)="msg2()">Submit</button><br>
+      <div class="container">
+        <h3><p>{{message2}}</p></h3>
+      </div>
+  </div>
+
+</div>
+ </div>
+
+
+
+ <center><img src="assets/roomdesign.png" height="20px" width="100px"></center>
+ <div class="container">
+     <div class="row">
+       
+       <div class="col-sm-4" style="background-color:lightgrey;">
+         <h4><b>About Windsor</b></h4><hr>
+         <h4><p>Hotel Windsor is a budget hotel located in the heart various locations.Hotel is equipped with all modern facilities which makes it a best budget hotel.Hotel is truly a hotel which makes it a best budget hotel.</p></h4>
+           </div>
+ 
+           <div class="col-sm-4" style="background-color:lightgrey;">
+             <h4><b>Our Services</b></h4><hr>
+             <h4>Punjabi Food<br>
+             South Indian Food<br>
+             Maharashtrian Food<br>
+             Italian Food<br>
+             Chinese Food</h4>
+           </div>
+ 
+           <div class="col-sm-4" style="background-color:lightgrey;">
+             <h4><b>Contact Us</b></h4><hr>
+         <h3>+91 3582583940<br>
+         +91 7848583655<br>
+         windsor@gmail.com</h3>
+         <img src="assets/facebook.jpg" alt="" width="40" height="40" class="image-responsive"><h6><a href="https://www.facebook.com/">Facebook</a></h6>
+         </div> 
+     </div>
+ </div>
+ 
+ 
+ 
+ 
+
+
+
+ <!--<label>Value of Card</label><br>
+ <a mat-raised-button href="https://www.google.com/" target="_blank">5,000</a>
+ <a mat-raised-button href="https://www.google.com/" target="_blank">15,000</a>
+ <a mat-raised-button href="https://www.google.com/" target="_blank">25,000</a><hr>
+ <label>Quantity</label><br>
+ <mat-form-field appearance="fill">
+  <mat-label>Select an option</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option>None</mat-option>
+    <mat-option value="option1">1</mat-option>
+    <mat-option value="option2">2</mat-option>
+    <mat-option value="option3">3</mat-option>
+    <mat-option value="option3">4</mat-option>
+    <mat-option value="option3">5</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="example-container">
+  <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+    <mat-label>Enter some input</mat-label>
+    <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+    <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+  </mat-form-field>-->
+  
+    
